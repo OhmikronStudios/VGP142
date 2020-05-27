@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 8784932757063389276}
   m_Layer: 0
   m_Name: erika_archer_bow_arrow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
   jumpSpeed: 5
   rotationSpeed: 20
   gravitySpeed: 9.81
-  projectileSpeed: 10
+  projectileSpeed: 15
   arrow: {fileID: 5836059236693910944, guid: 43ff05ab52a4b5b40ab1f6c0a6c57011, type: 3}
   arrowSpawn: {fileID: 8784932756460765900}
   type: 1
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3804a1501a0dd48ab05207cd18ae7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 0
+  axes: 1
   sensitivityX: 15
   sensitivityY: 15
   minimumX: -360
@@ -2768,7 +2768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8784932756460765900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.952, y: 1.4460001, z: -0.044}
+  m_LocalPosition: {x: -0.233, y: 1.4460001, z: 0.437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1070441768765260086}
@@ -2800,7 +2800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8784932756800796710}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 1.844, z: -0.11}
+  m_LocalPosition: {x: 0, y: 1.8, z: -1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4364248635155512132}

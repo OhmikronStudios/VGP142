@@ -27,6 +27,14 @@ public class Character : MonoBehaviour
 
     Vector3 moveDirection;
 
+    //[SerializeField] bool isGodMode;
+    //[SerializeField] float timerGodMode;
+    
+    //[SerializeField] float jumpBoost;
+    //[SerializeField] float timerJumpBoost;
+   
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +56,14 @@ public class Character : MonoBehaviour
 
             if (gravitySpeed <= 0)
             { gravitySpeed = 9.81f; Debug.Log("Speed not set on" + name + "defaulting to" + gravitySpeed); }
+
+            //isGodMode = false;
+            //if (timerGodMode <= 0)
+            //{ timerGodMode = 2.0f; Debug.Log("timerGodMode not set on" + name + "defaulting to" + timerGodMode); }
+            //if (jumpBoost <= 0)
+            //{ timerGodMode = 20.0f; Debug.Log("JumpBoost not set on" + name + "defaulting to" + jumpBoost); }
+            //if (timerJumpBoost <= 0)
+            //{ timerGodMode = 5.0f; Debug.Log("timerJumpBoost not set on" + name + "defaulting to" + timerJumpBoost); }
 
             moveDirection = Vector3.zero;
         }
@@ -137,6 +153,24 @@ public class Character : MonoBehaviour
         }
     }
 
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("OnTriggerEnter: " + other.gameObject.name);
+    //    if (other.CompareTag("PowerUp_Godmode"))
+    //    {
+    //        isGodMode = true;
+    //        Destroy(other.gameObject);
+    //        StartCoroutine(stopGodMode());
+    //    }
+    //    if (other.CompareTag("PowerUp_Superjump"))
+    //    {
+    //        jumpSpeed += jumpBoost;
+    //        Destroy(other.gameObject);
+    //        StartCoroutine(stopJumpBoost());
+    //    }
+    //}
+
     private void Punch()
     {
         anim.SetTrigger("Attack");
@@ -150,5 +184,19 @@ public class Character : MonoBehaviour
         Rigidbody temp = Instantiate(arrow.GetComponent<Rigidbody>(), arrowSpawn.transform.position, arrowSpawn.transform.rotation);
         temp.AddForce(arrowSpawn.transform.forward * projectileSpeed, ForceMode.Impulse);
     }
+
+    //IEnumerator stopGodMode()
+    //{
+    //    yield return new WaitForSeconds(timerGodMode);
+    //    isGodMode = false;
+    //}
+    //IEnumerator stopJumpBoost()
+    //{
+    //    yield return new WaitForSeconds(timerJumpBoost);
+    //    jumpSpeed -= jumpBoost;
+    //}
+
+
+
 
 }

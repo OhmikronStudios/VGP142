@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
+  - PatrolNode
+  - Powerup_Godmode
+  - Powerup_Superjump
   layers:
   - Default
   - TransparentFX
